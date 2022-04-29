@@ -1,25 +1,17 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Button;
 import java.awt.EventQueue;
+import java.awt.Label;
+import java.awt.TextField;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Panel;
-import java.awt.Color;
-import java.awt.TextArea;
-import javax.swing.JLabel;
-import java.awt.TextField;
-import java.awt.Label;
-import java.awt.Choice;
-import java.awt.Button;
-import java.awt.List;
-import javax.swing.JTable;
-import javax.swing.JList;
-import javax.swing.JMenuItem;
+import javax.swing.JFormattedTextField;
 
-public class RegisterCustomer extends JFrame {
+public class RegisterCar extends JFrame {
 
   private JPanel contentPane;
 
@@ -30,7 +22,7 @@ public class RegisterCustomer extends JFrame {
     EventQueue.invokeLater(new Runnable() {
       public void run() {
         try {
-          RegisterCustomer frame = new RegisterCustomer();
+          RegisterCar frame = new RegisterCar();
           frame.setVisible(true);
         } catch (Exception e) {
           e.printStackTrace();
@@ -42,8 +34,9 @@ public class RegisterCustomer extends JFrame {
   /**
    * Create the frame.
    */
-  public RegisterCustomer() {
-    setTitle("Register Customer");
+  public RegisterCar() {
+    setTitle("Register Car");
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setResizable(false);
     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     setBounds(100, 100, 450, 500);
@@ -56,9 +49,9 @@ public class RegisterCustomer extends JFrame {
     textFieldName.setBounds(20, 37, 222, 19);
     contentPane.add(textFieldName);
 
-    Label nameCustomer = new Label("Name:");
-    nameCustomer.setBounds(10, 10, 68, 21);
-    contentPane.add(nameCustomer);
+    Label nameCar = new Label("Name:");
+    nameCar.setBounds(10, 10, 68, 21);
+    contentPane.add(nameCar);
 
     TextField textFieldEmail = new TextField();
     textFieldEmail.setBounds(20, 89, 222, 19);
@@ -68,21 +61,21 @@ public class RegisterCustomer extends JFrame {
     textFieldAdress.setBounds(20, 141, 222, 19);
     contentPane.add(textFieldAdress);
 
-    Label email = new Label("Email:");
-    email.setBounds(10, 62, 68, 21);
-    contentPane.add(email);
+    Label brandCar = new Label("Brand:");
+    brandCar.setBounds(10, 62, 68, 21);
+    contentPane.add(brandCar);
 
-    Label adress = new Label("Adress:");
-    adress.setBounds(10, 114, 68, 21);
-    contentPane.add(adress);
+    Label categoryCar = new Label("Category:");
+    categoryCar.setBounds(10, 114, 68, 21);
+    contentPane.add(categoryCar);
 
-    Label phoneNumber = new Label("Phone Number:");
-    phoneNumber.setBounds(10, 166, 105, 21);
-    contentPane.add(phoneNumber);
+    Label licensePlate = new Label("License Plate:");
+    licensePlate.setBounds(10, 166, 105, 21);
+    contentPane.add(licensePlate);
 
-    Label driverLicense = new Label("Driver License:");
-    driverLicense.setBounds(10, 218, 105, 21);
-    contentPane.add(driverLicense);
+    Label colorCar = new Label("Color:");
+    colorCar.setBounds(10, 218, 105, 21);
+    contentPane.add(colorCar);
 
     TextField textFieldPhoneNumber = new TextField();
     textFieldPhoneNumber.setBounds(20, 193, 222, 19);
@@ -92,16 +85,16 @@ public class RegisterCustomer extends JFrame {
     textFieldDriverLicense.setBounds(20, 246, 222, 19);
     contentPane.add(textFieldDriverLicense);
 
-    Label birthDate = new Label("Birth Date:");
-    birthDate.setBounds(10, 271, 105, 21);
-    contentPane.add(birthDate);
+    Label descriptionCar = new Label("Description:");
+    descriptionCar.setBounds(10, 271, 105, 21);
+    contentPane.add(descriptionCar);
 
     Button btnRegister = new Button("Register");
-    btnRegister.setBounds(10, 343, 86, 23);
+    btnRegister.setBounds(10, 374, 86, 23);
     contentPane.add(btnRegister);
 
     TextField textFieldDriverLicense_1 = new TextField();
-    textFieldDriverLicense_1.setBounds(20, 298, 222, 19);
+    textFieldDriverLicense_1.setBounds(20, 298, 222, 70);
     contentPane.add(textFieldDriverLicense_1);
   }
 }
