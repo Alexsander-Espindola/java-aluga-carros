@@ -66,6 +66,9 @@ public class MainPage extends JFrame {
     JMenuItem mntmCategory = new JMenuItem("Category");
     mnRegister.add(mntmCategory);
     
+    JMenuItem mntmSpecification = new JMenuItem("Specification");
+    mnRegister.add(mntmSpecification);
+    
     JMenu mnExit = new JMenu("Exit");
     menuBar.add(mnExit);
     contentPane = new JPanel();
