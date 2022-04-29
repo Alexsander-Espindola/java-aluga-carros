@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 public class Cars {
   private String name;
@@ -11,5 +12,90 @@ public class Cars {
   private Brand brand;
   private Categories category;
   private String color;
-  private Date createdAt;
+  private LocalDate createdAt;
+  
+  public Cars(String name, String description, short dailyRate, short avaliable, String licensePlate,
+      Brand brand, Categories category, String color, Date createdAt) {
+    this.name = name;
+    this.description = description;
+    this.dailyRate = dailyRate;
+    this.avaliable = avaliable;
+    this.licensePlate = licensePlate;
+    this.brand = brand;
+    this.category = category;
+    this.color = color;
+    this.createdAt = LocalDate.now();
+  }
+  
+  public void registerCar(Cars car) {
+    
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public short getDailyRate() {
+    return dailyRate;
+  }
+
+  public void setDailyRate(short dailyRate) {
+    this.dailyRate = dailyRate;
+  }
+
+  public short getAvaliable() {
+    return avaliable;
+  }
+
+  public void setAvaliable(short avaliable) {
+    this.avaliable = avaliable;
+  }
+
+  public String getLicensePlate() {
+    return licensePlate;
+  }
+
+  public void setLicensePlate(String licensePlate) {
+    this.licensePlate = licensePlate;
+  }
+
+  public Brand getBrand() {
+    return brand;
+  }
+
+  public void setBrand(Brand brand) {
+    this.brand = brand;
+  }
+
+  public Categories getCategory() {
+    return category;
+  }
+
+  public void setCategory(Categories category) {
+    this.category = category;
+  }
+
+  public String getColor() {
+    return color;
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  public LocalDate getCreatedAt() {
+    return createdAt;
+  }
 }
