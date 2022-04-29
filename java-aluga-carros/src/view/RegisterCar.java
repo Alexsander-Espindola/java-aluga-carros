@@ -53,13 +53,13 @@ public class RegisterCar extends JFrame {
     nameCar.setBounds(10, 10, 68, 21);
     contentPane.add(nameCar);
 
-    TextField textFieldEmail = new TextField();
-    textFieldEmail.setBounds(20, 89, 222, 19);
-    contentPane.add(textFieldEmail);
+    TextField textFieldBrand = new TextField();
+    textFieldBrand.setBounds(20, 89, 222, 19);
+    contentPane.add(textFieldBrand);
 
-    TextField textFieldAdress = new TextField();
-    textFieldAdress.setBounds(20, 141, 222, 19);
-    contentPane.add(textFieldAdress);
+    TextField textFieldCategory = new TextField();
+    textFieldCategory.setBounds(20, 141, 222, 19);
+    contentPane.add(textFieldCategory);
 
     Label brandCar = new Label("Brand:");
     brandCar.setBounds(10, 62, 68, 21);
@@ -77,13 +77,13 @@ public class RegisterCar extends JFrame {
     colorCar.setBounds(10, 218, 105, 21);
     contentPane.add(colorCar);
 
-    TextField textFieldPhoneNumber = new TextField();
-    textFieldPhoneNumber.setBounds(20, 193, 222, 19);
-    contentPane.add(textFieldPhoneNumber);
+    TextField textFieldlicensePlate = new TextField();
+    textFieldlicensePlate.setBounds(20, 193, 222, 19);
+    contentPane.add(textFieldlicensePlate);
 
-    TextField textFieldDriverLicense = new TextField();
-    textFieldDriverLicense.setBounds(20, 246, 222, 19);
-    contentPane.add(textFieldDriverLicense);
+    TextField textFieldColor = new TextField();
+    textFieldColor.setBounds(20, 246, 222, 19);
+    contentPane.add(textFieldColor);
 
     Label descriptionCar = new Label("Description:");
     descriptionCar.setBounds(10, 271, 105, 21);
@@ -93,8 +93,8 @@ public class RegisterCar extends JFrame {
     btnRegister.setBounds(10, 374, 86, 23);
     contentPane.add(btnRegister);
 
-    TextField textFieldDriverLicense_1 = new TextField();
-    textFieldDriverLicense_1.setBounds(20, 298, 222, 70);
-    contentPane.add(textFieldDriverLicense_1);
+    TextField textFieldDescription = new TextField();
+    textFieldDescription.setBounds(20, 298, 222, 70);
+    contentPane.add(textFieldDescription);
   }
 }
