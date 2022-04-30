@@ -67,6 +67,12 @@ public class MainPage extends JFrame {
     mnRegister.add(mntmCar);
     
     JMenuItem mntmCustomer = new JMenuItem("Customer");
+    mntmCustomer.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        RegisterCustomer registerCustomer = new RegisterCustomer();
+        registerCustomer.main(null);
+      }
+    });
     mnRegister.add(mntmCustomer);
     
     JMenuItem mntmBrand = new JMenuItem("Brand");
