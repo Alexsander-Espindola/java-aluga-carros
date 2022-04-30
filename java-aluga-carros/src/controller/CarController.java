@@ -12,11 +12,10 @@ public class CarController {
 
     if (bolName || bolDescription || bolLicensePlate || bolColor) {
       Cars car = new Cars(name, description, dailyRate, avaliable, licensePlate, color);
-      car.registerCar(car);
+      car.addCarInDB(car);
       return true;
-    } else {      
-      return false;
-    }
+    }    
+    return false;
 
   }
 }
