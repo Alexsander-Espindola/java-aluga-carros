@@ -12,6 +12,10 @@ public class Brand {
     this.name = name;
     this.createdAt = LocalDate.now();
   }
+  
+  public void addBrandInDB(Brand brand) {
+    
+  }
 
   public String getName() {
     return name;
