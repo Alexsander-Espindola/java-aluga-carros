@@ -1,28 +1,27 @@
 package model;
 
-import java.sql.Date;
 import java.time.LocalDate;
 
 public class Cars {
   private String name;
   private String description;
-  private short dailyRate;
-  private short avaliable;
+  private double dailyRate;
+  private double avaliable;
   private String licensePlate;
   private Brand brand;
   private Categories category;
   private String color;
   private LocalDate createdAt;
   
-  public Cars(String name, String description, short dailyRate, short avaliable, String licensePlate,
-      Brand brand, Categories category, String color, Date createdAt) {
+  public Cars(String name, String description, double dailyRate, double avaliable, String licensePlate,
+      String color) {
     this.name = name;
     this.description = description;
     this.dailyRate = dailyRate;
     this.avaliable = avaliable;
     this.licensePlate = licensePlate;
-    this.brand = brand;
-    this.category = category;
+//    this.brand = brand;
+//    this.category = category;
     this.color = color;
     this.createdAt = LocalDate.now();
   }
@@ -47,19 +46,19 @@ public class Cars {
     this.description = description;
   }
 
-  public short getDailyRate() {
+  public double getDailyRate() {
     return dailyRate;
   }
 
-  public void setDailyRate(short dailyRate) {
+  public void setDailyRate(double dailyRate) {
     this.dailyRate = dailyRate;
   }
 
-  public short getAvaliable() {
+  public double getAvaliable() {
     return avaliable;
   }
 
-  public void setAvaliable(short avaliable) {
+  public void setAvaliable(double avaliable) {
     this.avaliable = avaliable;
   }
 
