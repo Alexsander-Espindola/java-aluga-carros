@@ -1,21 +1,20 @@
 package model;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Customers {
   private String name;
-  private Date birthDate;
+  private LocalDate birthDate;
   private String email;
   private String driverLicense;
   private String adress;
-  private int phoneNumber;
+  private String phoneNumber;
   private LocalDate createdAt;
   private LocalDate updatedAt;
   private ArrayList<Rentals> rentalHistory = new ArrayList<Rentals>();
  
-  public Customers(String name, Date birthDate, String email, String driverLicense, String adress, int phoneNumber) {
+  public Customers(String name, LocalDate birthDate, String email, String driverLicense, String adress, String phoneNumber) {
     this.name = name;
     this.birthDate = birthDate;
     this.email = email;
@@ -38,11 +37,11 @@ public class Customers {
     this.name = name;
   }
 
-  public Date getBirthDate() {
+  public LocalDate getBirthDate() {
     return birthDate;
   }
 
-  public void setBirthDate(Date birthDate) {
+  public void setBirthDate(LocalDate birthDate) {
     this.birthDate = birthDate;
   }
 
@@ -70,11 +69,11 @@ public class Customers {
     this.adress = adress;
   }
 
-  public int getPhoneNumber() {
+  public String getPhoneNumber() {
     return phoneNumber;
   }
 
-  public void setPhoneNumber(int phoneNumber) {
+  public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
   }
 

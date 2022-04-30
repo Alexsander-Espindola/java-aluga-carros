@@ -10,7 +10,7 @@ public class CarController {
     boolean bolLicensePlate = licensePlate != null && licensePlate.length() > 0;
     boolean bolColor = color != null && color.length() > 0;
 
-    if (bolName || bolDescription || bolLicensePlate || bolColor) {
+    if (bolName && bolDescription && bolLicensePlate && bolColor) {
       Cars car = new Cars(name, description, dailyRate, avaliable, licensePlate, color);
       car.addCarInDB(car);
       return true;
