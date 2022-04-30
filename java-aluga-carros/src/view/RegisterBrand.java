@@ -1,14 +1,19 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.EventQueue;
 import java.awt.Label;
 import java.awt.TextField;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controller.BrandController;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class RegisterBrand extends JFrame {
 
@@ -17,7 +22,7 @@ public class RegisterBrand extends JFrame {
   /**
    * Launch the application.
    */
-  public static void main(String[] args) {
+  public void main(String[] args) {
     EventQueue.invokeLater(new Runnable() {
       public void run() {
         try {
@@ -53,6 +58,23 @@ public class RegisterBrand extends JFrame {
     contentPane.add(nameBrand);
 
     Button btnRegister = new Button("Register");
+    btnRegister.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        String name = textFieldName.getText();
+        boolean success;
+        try {
+          BrandController brandController = new BrandController();
+          success = brandController.registerBrand(name);
+          if (success) {
+            JOptionPane.showMessageDialog(null, "Marca registrada com SUCCESS!!!!!!!!!!!");
+          } else {
+            JOptionPane.showMessageDialog(null, "Marca não foi registrada, foi um DES SUCCESS.");
+          }
+        } catch (Exception error) {
+          JOptionPane.showMessageDialog(null, "ERRO: " + error.getMessage());
+        }
+      }
+    });
     btnRegister.setBounds(20, 73, 86, 23);
     contentPane.add(btnRegister);
   }
