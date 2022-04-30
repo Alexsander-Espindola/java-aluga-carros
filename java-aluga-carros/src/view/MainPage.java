@@ -70,6 +70,12 @@ public class MainPage extends JFrame {
     mnRegister.add(mntmCustomer);
     
     JMenuItem mntmBrand = new JMenuItem("Brand");
+    mntmBrand.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        RegisterBrand newBrand = new RegisterBrand();
+        newBrand.main(null);
+      }
+    });
     mnRegister.add(mntmBrand);
     
     JMenuItem mntmCategory = new JMenuItem("Category");
