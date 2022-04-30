@@ -9,11 +9,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JMenu;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainPage extends JFrame {
 
-  private JPanel contentPane;
-
+  private JPanel contentPane = new JPanel();
+  JFrame mainFrame = new JFrame();
+  
   /**
    * Launch the application.
    */
@@ -55,6 +58,12 @@ public class MainPage extends JFrame {
     menuBar.add(mnRegister);
     
     JMenuItem mntmCar = new JMenuItem("Car");
+    mntmCar.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        RegisterCar registerCar = new RegisterCar();
+        registerCar.main(null);
+      }
+    });
     mnRegister.add(mntmCar);
     
     JMenuItem mntmCustomer = new JMenuItem("Customer");
@@ -71,7 +80,6 @@ public class MainPage extends JFrame {
     
     JMenu mnExit = new JMenu("Exit");
     menuBar.add(mnExit);
-    contentPane = new JPanel();
     contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
     contentPane.setLayout(new BorderLayout(0, 0));
     setContentPane(contentPane);
