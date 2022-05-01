@@ -67,9 +67,21 @@ public class MainPage extends JFrame {
     mnRegister.add(mntmCar);
     
     JMenuItem mntmCustomer = new JMenuItem("Customer");
+    mntmCustomer.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        RegisterCustomer registerCustomer = new RegisterCustomer();
+        registerCustomer.main(null);
+      }
+    });
     mnRegister.add(mntmCustomer);
     
     JMenuItem mntmBrand = new JMenuItem("Brand");
+    mntmBrand.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        RegisterBrand newBrand = new RegisterBrand();
+        newBrand.main(null);
+      }
+    });
     mnRegister.add(mntmBrand);
     
     JMenuItem mntmCategory = new JMenuItem("Category");

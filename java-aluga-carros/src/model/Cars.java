@@ -26,7 +26,7 @@ public class Cars {
     this.createdAt = LocalDate.now();
   }
   
-  public void registerCar(Cars car) {
+  public void addCarInDB(Cars car) {
     
   }
 
