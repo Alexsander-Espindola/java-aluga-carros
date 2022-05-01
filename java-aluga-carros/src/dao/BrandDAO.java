@@ -21,7 +21,7 @@ public class BrandDAO {
       pStatement.execute();
     } catch (SQLException error) {
       // TODO: handle exception
-      throw new ExceptionDAO("Erro ao cadastrar o carro: " + error.getMessage());
+      throw new ExceptionDAO("Erro ao cadastrar a marca: " + error.getMessage());
     } finally {
 
       try {
