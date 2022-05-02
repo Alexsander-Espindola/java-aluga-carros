@@ -15,7 +15,8 @@ public class CustomerDAO {
     Connection conn = null;
 
     try {
-      conn = new ConnectionSQL().getConnection();
+      new ConnectionSQL();
+      conn = ConnectionSQL.getConnection();
       pStatement = conn.prepareStatement(sql);
       pStatement.setString(1, customer.getName());
       pStatement.setString(2, customer.getBirthDate());
