@@ -1,6 +1,10 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import dao.CarDAO;
+import dao.ExceptionDAO;
 
 public class Cars {
   private String name;
@@ -26,8 +30,8 @@ public class Cars {
     this.createdAt = LocalDate.now();
   }
   
-  public void addCarInDB(Cars car) {
-    
+  public void addCarInDB(Cars car) throws ExceptionDAO {
+    new CarDAO().addCarInDB(car);;
   }
 
   public String getName() {
@@ -94,7 +98,8 @@ public class Cars {
     this.color = color;
   }
 
-  public LocalDate getCreatedAt() {
-    return createdAt;
+  public String getCreatedAt() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+    return createdAt.format(formatter);
   }
 }

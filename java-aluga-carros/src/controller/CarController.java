@@ -1,10 +1,11 @@
 package controller;
 
+import dao.ExceptionDAO;
 import model.Cars;
 
 public class CarController {
   public boolean registerCar(String name, String description, double dailyRate, double avaliable, String licensePlate,
-      String color) {
+      String color) throws ExceptionDAO {
     boolean bolName = name != null && name.length() > 0;
     boolean bolDescription = description != null && description.length() > 0;
     boolean bolLicensePlate = licensePlate != null && licensePlate.length() > 0;

@@ -3,12 +3,13 @@ package controller;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import dao.ExceptionDAO;
 import model.Customers;
 
 public class CustomerController {
 
   public boolean registerCustomer(String name, String birthDate, String email, String driverLicense, String adress,
-      String phoneNumber) {
+      String phoneNumber) throws ExceptionDAO {
     boolean bolName = name != null && name.length() > 0;
     boolean bolEmail = verifyEmail(email);
     boolean bolAdress = adress != null && adress.length() > 0;

@@ -1,7 +1,11 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+
+import dao.BrandDAO;
+import dao.ExceptionDAO;
 
 public class Brand {
   private String name;
@@ -13,8 +17,8 @@ public class Brand {
     this.createdAt = LocalDate.now();
   }
   
-  public void addBrandInDB(Brand brand) {
-    
+  public void addBrandInDB(Brand brand) throws ExceptionDAO {
+    new BrandDAO().addBrandInDB(brand);
   }
 
   public String getName() {
@@ -33,8 +37,9 @@ public class Brand {
     this.cars.add(car);
   }
 
-  public LocalDate getCreatedAt() {
-    return createdAt;
+  public String getCreatedAt() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+    return createdAt.format(formatter);
   }
   
   

@@ -1,6 +1,13 @@
 package model;
 
+import java.util.Date;
+
+import dao.CustomerDAO;
+import dao.ExceptionDAO;
+
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Customers {
@@ -25,8 +32,8 @@ public class Customers {
     this.updatedAt = LocalDate.now();
   }
   
-  public void addCustomerInDB(Customers customer) {
-    
+  public void addCustomerInDB(Customers customer) throws ExceptionDAO {
+    new CustomerDAO().addCustomerInDB(customer);
   }
 
   public String getName() {
@@ -37,8 +44,9 @@ public class Customers {
     this.name = name;
   }
 
-  public LocalDate getBirthDate() {
-    return birthDate;
+  public String getBirthDate() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    return birthDate.format(formatter);
   }
 
   public void setBirthDate(LocalDate birthDate) {
@@ -93,8 +101,9 @@ public class Customers {
     this.rentalHistory.add(rentalHistory);
   }
 
-  public LocalDate getCreatedAt() {
-    return createdAt;
+  public String getCreatedAt() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+    return createdAt.format(formatter);
   }
   
   
