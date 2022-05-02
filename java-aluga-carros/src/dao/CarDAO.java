@@ -14,7 +14,8 @@ public class CarDAO {
     Connection conn = null;
 
     try {
-      conn = new ConnectionSQL().getConnection();
+      new ConnectionSQL();
+      conn = ConnectionSQL.getConnection();
       pStatement = conn.prepareStatement(sql);
       pStatement.setString(1, car.getName());
       pStatement.setString(2, car.getDescription());
